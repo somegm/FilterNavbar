@@ -88,10 +88,9 @@ const fakeData = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("Tours");
+  const selectedCategory = "Tours";
   const [filters, setFilters] = useState({});
   const [filteredData, setFilteredData] = useState(fakeData);
-  const [timeRange, setTimeRange] = useState({ min: "00:00", max: "23:59" });
 
   const handleFilterChange = (filterKey, filterValue) => {
     setFilters((prev) => {
@@ -276,7 +275,7 @@ export default function Navbar() {
     <>
       {/* Navbar */}
       <nav className="bg-[#F78410] p-4 flex justify-between items-center shadow-md">
-        <h1 className="text-white text-lg font-bold">Traveller's Local Market</h1>
+        <h1 className="text-white text-lg font-bold">Traveller&apos;s Local Market</h1>
         {/* Filter Button for Mobile */}
         <button
           onClick={() => setIsOpen(true)}
